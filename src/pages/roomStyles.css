@@ -1,0 +1,33 @@
+.rooms-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.table-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.rooms-table{
+    border-collapse: collapse;
+    width: 80%;
+    background-color: aquamarine;
+}
+
+.rooms-table th, .rooms-table td{
+    border: 2px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+.rooms-table th{
+    background-color: rgb(37, 69, 102);
+    color: azure;
+    font-weight: bold;
+}
+
+.rooms-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
