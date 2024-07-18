@@ -10,7 +10,6 @@ import NoPage from "./AppPages/noPage";
 // import Header from './components/header';
 import './App.css'
 
-import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
 import {
   withAuthenticator,
