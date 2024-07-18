@@ -6,12 +6,6 @@ const Room = () =>{
     const [backendData, setBackendData] = useState([{}]);
     const [hostelId, setHostelId] = useState(-1);
 
-    // const handleSelectChange = (e) =>{
-    //     const newVal = e.target.value;
-    //     setHostelId(newVal);
-    //     console.log("New value: ", newVal);
-    // };
-
     function handleForm(event){
         event.preventDefault();
         // alert(backendData.length);
@@ -23,21 +17,6 @@ const Room = () =>{
         let choice = {
             hostelId:hostelId
         };
-        fetch("/roomList",{
-            method: "post",
-            headers: {"Content-Type":"application/json"},
-            body: JSON.stringify(choice)
-        }).then(response=>{
-            if(!response.ok ){
-                throw new Error("Network Error");
-            }
-            return response.json();
-        }).then(data=>{
-            setBackendData(data);
-        }).catch(error =>{
-            console.error("Error fetching data: ", error);
-        });
-        
         // console.log(backendData);
     };
 
